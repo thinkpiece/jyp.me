@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Research | Junyoung Park at KAIST</title>
+    <meta name="description" content="This site contains some information on my past and present research work and publications">
+    <meta name="author" content="Junyoung Park">
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Customized CSS -->
+    <link rel="stylesheet" href="css/thinkpiece.css" />
+
+    <!-- Customized fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!-- Navigation Bar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Junyoung Park</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+            <li><a href="about.html"><span class="glyphicon glyphicon-user"></span> About</a></li>
+            <li class="active"><a href="research.html"><span class="glyphicon glyphicon-asterisk"></span> Research</a></li>
+            <li><a href="publications.html"><span class="glyphicon glyphicon-book"></span> Publication</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-link"></span> Links <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">Personal</li>
+                <li><a href="http://www.linkedin.com/pub/junyoung-park/47/a17/743">Linkedin</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Organizations</li>
+                <li><a href="http://www.kaist.edu">KAIST</a></li>
+                <li><a href="http://ssl.kaist.ac.kr">KAIST SSL</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="page-header">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>System-on-Chip</h1>
+            <p class="lead">Full chip implementation for computer vision and machine learning</p>
+          </div>
+        </div>
+
+
+        <div class="subsection-item">
+          <div class="row">
+            <div class="col-md-9">
+              <h4>Traffic Sign Recognition Processor</h4>
+              <div class="p-article">
+                <p>We propose a robust real-time traffic sign recognition system with two-chip integration: a Retinex preprocessor and a SVM processor. The Retinex preprocessor performs the Multi-Scale Retinex (MSR) algorithm for robust light and dark adaptation under harsh illumination environment. The SVM processor performs the Support Vector Machine (SVM) algorithm for robust traffic sign classification. The proposed system is implemented as two separated ICs in a 0.13μm CMOS process and the two chips are connected using Network-on-Chip (NoC) off-chip gateway.</p>
+              </div>
+              <p>Relevant Paper:</p>
+              <ul class="list-unstyled p-article">
+                <li>J. Park, J. Kwon, J. Oh, S. Lee, J.-Y. Kim, and H.-J. Yoo., A 92-mW Real-Time Traffic Sign Recognition System With Robust Illumination Adaptation and Support Vector Machine, <em>Solid-State Circuits, IEEE Journal of</em>, vol.47, no.11, pp.2711-2723, Nov. 2012. <a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6296728&isnumber=6339059"><span class="glyphicon glyphicon-link"></span></a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <img src="images/research_tsp.jpg" alt="research tsp" class="img-responsive center-block"/>
+            </div>
+          </div>
+        </div>
+
+        <div class="subsection-item">
+          <div class="row">
+            <div class="col-md-9">
+              <h4>Many-core Object Recognition Processor for Augmented Reality Headset</h4>
+              <div class="p-article">
+                <p>Augmented reality has recently been gaining popularity in the consumer sector, especially in the form of smart phone apps. However, the actually useful apps are still limited to GPS based navigation applications, in which information about stationary locations and/or movement directions are overlaid on top of a phone’s camera input video. Vision based augmented reality has the potential for much more useful and entertaining applications such as games involving interaction with real world objects, and more realistic overlays that blend in with the environment. However, until now, the limited performance of mobile hardware has been an obstacle to realizing real-time object recognition needed by such applications. The main requirements for real-time vision based augmented reality in a mobile form factor are high performance, and low power.</p>
+                <p>In this work, we presented an object recognition processor aimed at real-time vision based augmented reality in mobile applications, which achieves high performance yet low power operation by employing a heterogeneous array of simple processors. Multiple stages of processing, common to modern local feature based object recognition algorithms, plus an additional pre-processing stage for visual attention are pipelined using these optimized programmable processors to achieve 30fps real-time performance on VGA video streams. The object recognition chip, containing 51 IPs in two voltage/frequency domains, was fabricated in a 0.13 µm CMOS process, and verified to operate at 1.2V/200MHz and 0.65V/50MHz.</p>
+                <p>In the demonstration system, the object recognition chip successfully recognizes pre-learned objects that are saved in the database at a rate of 30fps from VGA video images. Tests carried out in indoor/outdoor environments verify the robustness of the object recognition chip, and the viability of vision based augmented reality systems in a mobile form factor.</p>
+              </div>
+              <p>Relevant Paper:</p>
+              <ul class="list-unstyled p-article">
+                <li>S. Lee, J. Oh, J. Park, J. Kwon, M. Kim, H.-J. Yoo., A 345 mW Heterogeneous Many-Core Processor With an Intelligent Inference Engine for Robust Object Recognition, <em>Solid-State Circuits, IEEE Journal of</em>, vol.46, no.1, pp.42-51, Jan. 2011. <a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5599944&isnumber=5673672"><span class="glyphicon glyphicon-link"></span></a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <img src="images/research_bv4.jpg" alt="research stcp" class="img-responsive center-block"/>
+            </div>
+          </div>
+        </div>
+
+        <div class="subsection-item">
+          <div class="row">
+            <div class="col-md-9">
+              <h4>Belief Propagation based Stereo Matching Processor</h4>
+              <div class="p-article">
+                <p>A real-time stereo matching processor based on the belief propagation algorithm has been designed. We propose a disparity-parallel PE array architecture for computationally complex message construction. Also, we adopt a tile-based belief propagation approach reduces the on-chip memory requirements. In addition, a two-level on-chip buffer and memory access pipelining enable high PE utilization. As a result, the message construction rate of the PEs is increased by 6.45x compared to previous works. The fabricated processor in a 0.18um CMOS process achieves 30 fps performance for QVGA (320x240) video inputs at 200 MHz operating frequency.</p>
+              </div>
+              <p>Relevant Paper:</p>
+              <ul class="list-unstyled p-article">
+                <li>J. Park, S. Lee, H.-J. Yoo., A 30fps Stereo Matching Processor Based on Belief Propagation with Disparity-Parallel PE Array Architecture, <em>IEEE International Symposium on Circuits and Systems (ISCAS)</em>, Mar., 2010. <a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5537657"><span class="glyphicon glyphicon-link"></span></a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <img src="images/research_stcp.jpg" alt="research stcp" class="img-responsive center-block"/>
+            </div>
+          </div>
+        </div>
+
+
+
+
+      </div><!-- page header -->
+
+
+      <div class="page-header">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Network-on-Chip</h1>
+            <p class="lead">System-C based cycle-accurate architecture simulation</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-9">
+            <h4>A Multi-Casting Network-on-Chip with Hierarchical Star-Ring Combined Topology</h4>
+            <div class="p-article">
+              <p>A multi-casting network-on-chip has been proposed as communication platform for a real-time object recognition. In this work, I have implemented a cycle-accurate Network-on-Chip architecture simulator using System-C libraries with TLM socket interface, and the traffic model libraries. The traffic model library contains synthetic traffic patterns and traffic generating subjects such as real IP's instruction set simulator and traffic generator. Using the implemented NoC simulator, we measured the average latency, bandwidth utilization, and implementation cost of several NoC topologies when the object recognition runs for VGA images. As a result, we have drawn a conclusion that the HS-R combined topology is suitable for the communication platform in real-time object recognition.</p>
+            </div>
+            <p>Relevant Paper:</p>
+            <ul class="list-unstyled p-article">
+              <li>J.-Y. Kim, J. Park, S. Lee, M. Kim, J. Oh, and H.-J. Yoo, A 118.4 GB/s Multi-Casting Network-on-Chip With Hierarchical Star-Ring Combined Topology for Real-Time Object Recognition, <em>Solid-State Circuits, IEEE Journal of</em>, vol.45, no.7, pp.1399-1409, July 2010. <a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5492313&isnumber=5492307"><span class="glyphicon glyphicon-link"></span></a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <img src="images/research_noc.jpg" alt="research noc" class="img-rounded img-responsive center-block" />
+          </div>
+        </div>
+      </div>
+
+
+    </div><!-- /.container -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
